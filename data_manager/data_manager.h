@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "data_manager_global.h"
 #include "data_driver.h"
@@ -22,20 +22,20 @@ public:
     int get_next_edge(int idx);
     void set_node(int idx, NodeData node);
 
-    // ±ØĞëÏÈ load_net ÔÙ load ÆäËû
-    // ·µ»ØÖµ
-    // -1: ÎÄ¼ş¼ÓÔØ´íÎó»òÊı¾İ¸ñÊ½²»¶Ô
-    // n(>0): ½áµã¸öÊı
-    int load_net(const char* filepath, bool IncludeWeight);  // ¶ÁÈ¡ÍøÂçÎÄ¼ş È»ºó³õÊ¼»¯ nd
+    // å¿…é¡»å…ˆ load_net å† load å…¶ä»–
+    // è¿”å›å€¼
+    // -1: æ–‡ä»¶åŠ è½½é”™è¯¯æˆ–æ•°æ®æ ¼å¼ä¸å¯¹
+    // n(>0): ç»“ç‚¹ä¸ªæ•°
+    int load_net(const char* filepath, bool IncludeWeight);  // è¯»å–ç½‘ç»œæ–‡ä»¶ ç„¶ååˆå§‹åŒ– nd
 
-    // ·µ»ØÖµ
-    // -1: ÎÄ¼ş¼ÓÔØ´íÎó£¨±ÈÈçÎÄ¼ş²»´æÔÚ£©
-    // 0: Êı¾İ²»¹»£¨±ÈÈçÃ»Ğ´¹» num_node ¸öÃû×Ö×Ö·û´®£©
-    // 1: Õı³£
-    int load_name(const char* filepath, int MaxNameLength = 100);  // Ä¬ÈÏ×î´óÃû³Æ³¤¶ÈÎª 100
+    // è¿”å›å€¼
+    // -1: æ–‡ä»¶åŠ è½½é”™è¯¯ï¼ˆæ¯”å¦‚æ–‡ä»¶ä¸å­˜åœ¨ï¼‰
+    // 0: æ•°æ®ä¸å¤Ÿï¼ˆæ¯”å¦‚æ²¡å†™å¤Ÿ num_node ä¸ªåå­—å­—ç¬¦ä¸²ï¼‰
+    // 1: æ­£å¸¸
+    int load_name(const char* filepath, int MaxNameLength = 100);  // é»˜è®¤æœ€å¤§åç§°é•¿åº¦ä¸º 100
     int load_age(const char* filepath);
     int load_price(const char* filepath);
 
-    void build_grapher();  // ¹¹ÔìÁ´Ê½Ç°ÏòĞÇ ±ØĞëÔÚ level_sort Ö®Ç°¹¹Ôì
-    void level_sort(std::vector<int>& mapper);  // ¼ÆËã½áµãÈ¨ÖØ²¢ÅÅĞò id ¶ÔÓ¦ĞÂÏÂ±ê±£´æÔÚÊı×é mapper Àï
+    void build_grapher();  // æ„é€ é“¾å¼å‰å‘æ˜Ÿ å¿…é¡»åœ¨ level_sort ä¹‹å‰æ„é€ 
+    void level_sort(std::vector<int>& mapper);  // è®¡ç®—ç»“ç‚¹æƒé‡å¹¶æ’åº id å¯¹åº”æ–°ä¸‹æ ‡ä¿å­˜åœ¨æ•°ç»„ mapper é‡Œ
 };

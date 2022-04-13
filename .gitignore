@@ -52,3 +52,10 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+/data_driver/x64
+/data_manager/x64
+/layouter/x64
+/VisNetApp/x64
+/VisNetApp/.vs
+/layout_test

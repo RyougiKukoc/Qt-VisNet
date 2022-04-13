@@ -1,4 +1,4 @@
-#include "data_manager.h"
+﻿#include "data_manager.h"
 #include <algorithm>
 
 data_manager::data_manager() {

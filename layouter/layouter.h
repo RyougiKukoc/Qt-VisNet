@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "layouter_global.h"
 #include "data_manager.h"

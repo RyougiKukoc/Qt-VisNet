@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\st_st\Documents\VisNet\main\data_driver\x64\Debug\qmake\temp;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\include;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtANGLE;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore;C:\Users\st_st\Documents\VisNet\main\data_driver\x64\Debug\qmake\temp;C:\VulkanSDK\1.2.189.2\include;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\QT\VisNet\data_driver\x64\Debug\qmake\temp;D:\QT\5.14.2\msvc2017_64\include;D:\QT\5.14.2\msvc2017_64\include\QtGui;D:\QT\5.14.2\msvc2017_64\include\QtANGLE;D:\QT\5.14.2\msvc2017_64\include\QtCore;D:\QT\VisNet\data_driver\x64\Debug\qmake\temp;/include;D:\QT\5.14.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>.\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -49,7 +49,7 @@
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Guid.lib;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Cored.lib;C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmaind.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D:\QT\5.14.2\msvc2017_64\lib\Qt5Guid.lib;D:\QT\5.14.2\msvc2017_64\lib\Qt5Cored.lib;D:\QT\5.14.2\msvc2017_64\lib\qtmaind.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -72,8 +72,8 @@
   <ItemGroup>
     <CustomBuild Include="moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">cl -BxC:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W0 -E C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;moc_predefs.h</Command>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">D:\QT\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">cl -BxD:\QT\5.14.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W0 -E D:\QT\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;moc_predefs.h</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">Generate moc_predefs.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>

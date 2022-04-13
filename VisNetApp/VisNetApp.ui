@@ -30,23 +30,10 @@
           <item>
            <widget class="QWidget" name="widget_6" native="true">
             <layout class="QGridLayout" name="gridLayout">
-             <item row="4" column="1">
-              <widget class="QPushButton" name="pushButton_5">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>停止</string>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="0">
               <widget class="QLabel" name="label_3">
                <property name="text">
-                <string>节点特征选择</string>
+                <string>用户选项</string>
                </property>
               </widget>
              </item>
@@ -63,6 +50,26 @@
                </property>
               </widget>
              </item>
+             <item row="4" column="1">
+              <widget class="QPushButton" name="pushButton_5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>停止</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" rowspan="2">
+              <widget class="QCheckBox" name="checkBox_4">
+               <property name="text">
+                <string>包含网络平均延时</string>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="1">
               <widget class="QLabel" name="label_4">
                <property name="text">
@@ -70,10 +77,10 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="0" rowspan="2" colspan="2">
-              <widget class="QCheckBox" name="checkBox_4">
+             <item row="5" column="0" rowspan="2">
+              <widget class="QCheckBox" name="checkBox_6">
                <property name="text">
-                <string>节点特征1</string>
+                <string>服务器造价</string>
                </property>
               </widget>
              </item>
@@ -90,17 +97,10 @@
                </property>
               </widget>
              </item>
-             <item row="5" column="0" rowspan="2">
-              <widget class="QCheckBox" name="checkBox_6">
-               <property name="text">
-                <string>节点特征3</string>
-               </property>
-              </widget>
-             </item>
              <item row="3" column="0" rowspan="2">
               <widget class="QCheckBox" name="checkBox_5">
                <property name="text">
-                <string>节点特征2</string>
+                <string>服役时间</string>
                </property>
               </widget>
              </item>
@@ -108,69 +108,28 @@
            </widget>
           </item>
           <item>
-           <widget class="QListWidget" name="listWidget">
-            <item>
-             <property name="text">
-              <string>已添加的文件：</string>
-             </property>
-            </item>
-           </widget>
+           <widget class="QListWidget" name="listWidget"/>
           </item>
          </layout>
         </widget>
        </item>
        <item>
-        <widget class="QTabWidget" name="tabWidget">
-         <property name="currentIndex">
-          <number>4</number>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
          </property>
-         <widget class="QWidget" name="net">
-          <attribute name="title">
-           <string>net</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>277</width>
+            <height>302</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
-            <widget class="QTableWidget" name="tablenet"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="name">
-          <attribute name="title">
-           <string>name</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
-           <item>
-            <widget class="QTableWidget" name="tablename"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="feature1">
-          <attribute name="title">
-           <string>feature1</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
-           <item>
-            <widget class="QTableWidget" name="tablefeature1"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="feature2">
-          <attribute name="title">
-           <string>feature2</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_6">
-           <item>
-            <widget class="QTableWidget" name="tablefeature2"/>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="feature3">
-          <attribute name="title">
-           <string>feature3</string>
-          </attribute>
-          <layout class="QVBoxLayout" name="verticalLayout_7">
-           <item>
-            <widget class="QTableWidget" name="tableWidget_4"/>
+            <widget class="QTextBrowser" name="textBrowser"/>
            </item>
           </layout>
          </widget>
@@ -196,9 +155,8 @@
     </property>
     <addaction name="action_add_net"/>
     <addaction name="action_add_name"/>
-    <addaction name="action_add_feature1"/>
-    <addaction name="action_add_feature2"/>
-    <addaction name="action_add_feature3"/>
+    <addaction name="action_add_age"/>
+    <addaction name="action_add_price"/>
    </widget>
    <widget class="QMenu" name="menu_set">
     <property name="title">
@@ -230,14 +188,14 @@
     <string>添加节点名称映射表</string>
    </property>
   </action>
-  <action name="action_add_feature1">
+  <action name="action_add_age">
    <property name="text">
-    <string>添加节点特征文件1</string>
+    <string>添加服役时间文件</string>
    </property>
   </action>
-  <action name="action_add_feature2">
+  <action name="action_add_price">
    <property name="text">
-    <string>添加节点特征文件2</string>
+    <string>添加服务器造价文件</string>
    </property>
   </action>
   <action name="action_add_feature3">

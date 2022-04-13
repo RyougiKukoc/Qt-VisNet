@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "data_driver_global.h"
 #include <vector>
@@ -6,13 +6,13 @@
 #include <utility>
 
 struct DATA_DRIVER_EXPORT NodeData {
-    int id;  // ¸Ã½áµãÔÚÍøÂçÖĞµÄ±êºÅ
-    int head;  // ¸Ã½áµãÖ¸ÏòµÄµÚÒ»Ìõ±ßµÄ±àºÅ
-    std::string name;  // ¸Ã½áµãµÄÃû×Ö
-    double age, price;  // ¸Ã½áµã¶ÔÓ¦·şÎñÆ÷µÄ·şÒÛÄêÁäºÍÔì¼Û
-    double weight;  // ¸Ã½áµãµÄµãÈ¨
-    int level;  // ¸Ã½áµã¸ù¾İµãÈ¨»®·ÖµÄµÈ¼¶ ¸ÃÊı×ÖÔ½´óµÈ¼¶Ô½¸ß »­µÄÔ½´ó
-    std::pair<double, double> coordinate;  // ¸Ã½áµãÔÚ»­²¼ÉÏµÄ×ø±ê
+    int id;  // è¯¥ç»“ç‚¹åœ¨ç½‘ç»œä¸­çš„æ ‡å·
+    int head;  // è¯¥ç»“ç‚¹æŒ‡å‘çš„ç¬¬ä¸€æ¡è¾¹çš„ç¼–å·
+    std::string name;  // è¯¥ç»“ç‚¹çš„åå­—
+    double age, price;  // è¯¥ç»“ç‚¹å¯¹åº”æœåŠ¡å™¨çš„æœå½¹å¹´é¾„å’Œé€ ä»·
+    double weight;  // è¯¥ç»“ç‚¹çš„ç‚¹æƒ
+    int level;  // è¯¥ç»“ç‚¹æ ¹æ®ç‚¹æƒåˆ’åˆ†çš„ç­‰çº§ è¯¥æ•°å­—è¶Šå¤§ç­‰çº§è¶Šé«˜ ç”»çš„è¶Šå¤§
+    std::pair<double, double> coordinate;  // è¯¥ç»“ç‚¹åœ¨ç”»å¸ƒä¸Šçš„åæ ‡
     NodeData() {
         id = 0;
         head = 0;
@@ -41,17 +41,17 @@ struct DATA_DRIVER_EXPORT EdgeData {
 
 class DATA_DRIVER_EXPORT data_driver {
 public:
-    // ±ØĞëÏÈ load_net ÔÙ load ÆäËû
-    // ·µ»ØÖµ
-    // -1: ÎÄ¼ş¼ÓÔØ´íÎó»òÊı¾İ¸ñÊ½²»¶Ô
-    // n(>0): ½áµã¸öÊı
+    // å¿…é¡»å…ˆ load_net å† load å…¶ä»–
+    // è¿”å›å€¼
+    // -1: æ–‡ä»¶åŠ è½½é”™è¯¯æˆ–æ•°æ®æ ¼å¼ä¸å¯¹
+    // n(>0): ç»“ç‚¹ä¸ªæ•°
     int load_net(std::vector<EdgeData>& ed, int& NumEdge, const char* filepath, bool IncludeWeight);
 
-    // ·µ»ØÖµ
-    // -1: ÎÄ¼ş¼ÓÔØ´íÎó£¨±ÈÈçÎÄ¼ş²»´æÔÚ£©
-    // 0: Êı¾İ²»¹»£¨±ÈÈçÃ»Ğ´¹» num_node ¸öÃû×Ö×Ö·û´®£©
-    // 1: Õı³£
-    int load_name(std::vector<NodeData>& nd, int NumNode, const char* filepath, int MaxNameLength = 100);  // Ä¬ÈÏ×î´óÃû³Æ³¤¶ÈÎª 100
+    // è¿”å›å€¼
+    // -1: æ–‡ä»¶åŠ è½½é”™è¯¯ï¼ˆæ¯”å¦‚æ–‡ä»¶ä¸å­˜åœ¨ï¼‰
+    // 0: æ•°æ®ä¸å¤Ÿï¼ˆæ¯”å¦‚æ²¡å†™å¤Ÿ num_node ä¸ªåå­—å­—ç¬¦ä¸²ï¼‰
+    // 1: æ­£å¸¸
+    int load_name(std::vector<NodeData>& nd, int NumNode, const char* filepath, int MaxNameLength = 100);  // é»˜è®¤æœ€å¤§åç§°é•¿åº¦ä¸º 100
     int load_age(std::vector<NodeData>& nd, int NumNode, const char* filepath);
     int load_price(std::vector<NodeData>& nd, int NumNode, const char* filepath);
 };

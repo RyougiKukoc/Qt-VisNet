@@ -1,11 +1,11 @@
-#include "layouter.h"
+﻿#include "layouter.h"
 #include <algorithm>
 #include <stdlib.h>
 #include <time.h>
 #include <utility>
 #include <math.h>
 
-const double xlength = 4000, ylength = 4000;
+const double xlength = 8000, ylength = 8000;
 const double CR = 1000000;
 const double CS1 = 100, CS2 = 200;
 const double Cstep = 10, CU = 1000;
@@ -43,6 +43,7 @@ void layouter::updateReplusion(data_manager& manager) {
 				forcey[j] += fy;
 			}
 		}
+		//nodenum = manager.get_num_node();
 	}
 }
 

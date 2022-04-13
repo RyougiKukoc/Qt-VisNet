@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 #include <stdio.h>
 
 namespace bufferio {
 
     const int IOBufferLength = 10000;
-    char *io_buffer, *io_buffer_start = io_buffer, *io_buffer_end = io_buffer;
+    char* io_buffer, * io_buffer_start = io_buffer, * io_buffer_end = io_buffer;
 
     void clear_buffer() {
         delete[] io_buffer;
