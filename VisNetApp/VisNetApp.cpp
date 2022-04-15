@@ -1,6 +1,6 @@
 ﻿#include "VisNetApp.h"
 
-const int MaxIter = 100000000;
+const int MaxIter = 1000000000;
 
 VisNetApp::VisNetApp(QWidget *parent)
     : QMainWindow(parent)
@@ -155,13 +155,12 @@ VisNetApp::VisNetApp(QWidget *parent)
         labelimage->show();
         });
     connect(ui.pushButton_5, &QPushButton::clicked, [&]() {
-        QString path5 = QFileDialog::getSaveFileName(this, "open", "../",".png(*.png)");
+        QString path5 = QFileDialog::getSaveFileName(this, "open", "../", ".png(*.png)");
         QPixmap pix_save = pat.get_pix();
         pix_save.save(path5);
         QMessageBox::information(this, "Finish", "VisNet picture  saved!", QMessageBox::Ok);
         ui.listWidget->addItem("Picture has been saved!path:");
         ui.listWidget->addItem(path5);
-        QMainWindow::close();
+        // QMainWindow::close();
         });
-
 }
