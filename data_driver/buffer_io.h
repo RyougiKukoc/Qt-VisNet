@@ -9,6 +9,9 @@ namespace bufferio {
 
     void clear_buffer() {
         delete[] io_buffer;
+        io_buffer = NULL;
+        io_buffer_start = io_buffer;
+        io_buffer_end = io_buffer;
     }
 
     // Return a single character, and load fp on io_buffer when it runs out.

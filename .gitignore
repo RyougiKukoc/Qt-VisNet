@@ -56,6 +56,7 @@ compile_commands.json
 /data_driver/x64
 /data_manager/x64
 /layouter/x64
+/painter/x64
 /VisNetApp/x64
 /VisNetApp/.vs
 /layout_test

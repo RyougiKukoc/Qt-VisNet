@@ -8,6 +8,7 @@ private:
     std::vector<NodeData> nd;
     std::vector<EdgeData> ed;
     std::vector<int> target, weight, pre;
+    std::vector<int> mapper;
     int NumNode, NumEdge;
     data_driver driver;
 
@@ -21,6 +22,7 @@ public:
     int get_weight(int idx);
     int get_next_edge(int idx);
     void set_node(int idx, NodeData node);
+    std::vector<int> get_mapper();
 
     // 必须先 load_net 再 load 其他
     // 返回值
@@ -37,5 +39,5 @@ public:
     int load_price(const char* filepath);
 
     void build_grapher();  // 构造链式前向星 必须在 level_sort 之前构造
-    void level_sort(std::vector<int>& mapper);  // 计算结点权重并排序 id 对应新下标保存在数组 mapper 里
+    void level_sort();  // 计算结点权重并排序 id 对应新下标保存在数组 mapper 里
 };

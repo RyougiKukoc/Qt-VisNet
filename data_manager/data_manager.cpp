@@ -27,14 +27,20 @@ int data_manager::get_next_edge(int idx) { return pre[idx]; }
 
 void data_manager::set_node(int idx, NodeData node) { nd[idx] = node; }
 
+std::vector<int> data_manager::get_mapper() { return mapper; }
+
 int data_manager::load_net(const char* filepath, bool IncludeWeight) {
+    ed.clear();  // 重置边集
     NumNode = driver.load_net(ed, NumEdge, filepath, IncludeWeight);
-    if (NumEdge != -1) {
-        nd.clear();
+    if (NumNode != -1) {
+        nd.clear();  // 重置点集
         nd.resize(NumNode + 1);
         for (int i = 1; i <= NumNode; i++)
             nd[i].id = i;
     }
+    target.clear();  // 重置链式前向星
+    weight.clear();
+    pre.clear();
     return NumNode;
 }
 
@@ -67,7 +73,7 @@ void data_manager::build_grapher() {
 
 bool operator < (NodeData& i, NodeData& j) { return i.weight > j.weight; }
 
-void data_manager::level_sort(std::vector<int>& mapper) {
+void data_manager::level_sort() {
     int l1 = NumNode * 0.07, l2 = NumNode * 0.35;
     double max1 = -1, max2 = -1, max3 = -1, min1 = 1e12, min2 = 1e12, min3 = 1e12;
     for (int i = 1; i <= NumNode; i++) {

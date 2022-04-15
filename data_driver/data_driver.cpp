@@ -13,14 +13,18 @@ int data_driver::load_net(std::vector<EdgeData>& ed, int& NumEdge, const char* f
         flag = IncludeWeight ? bufferio::read3(u, v, w, fp) : bufferio::read2(u, v, fp);
         if (!flag)
             break;
-        if (flag == 2)
+        if (flag == 2) {
+            bufferio::clear_buffer();
             return -1;
+        }
         MaxIndex = std::max(u, MaxIndex);
         MaxIndex = std::max(v, MaxIndex);
         MinIndex = std::min(u, MinIndex);
         MinIndex = std::min(v, MinIndex);
-        if (MinIndex < 1)
+        if (MinIndex < 1) {
+            bufferio::clear_buffer();
             return -1;
+        }
         if (IncludeWeight)
             ed.push_back(EdgeData(u, v, w));
         else

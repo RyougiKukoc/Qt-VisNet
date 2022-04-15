@@ -30,15 +30,8 @@
           <item>
            <widget class="QWidget" name="widget_6" native="true">
             <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>用户选项</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QPushButton" name="pushButton_6">
+             <item row="2" column="1">
+              <widget class="QPushButton" name="pushButton_4">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -46,22 +39,29 @@
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>重新运行</string>
+                <string>运行</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
-              <widget class="QPushButton" name="pushButton_5">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
+             <item row="5" column="0">
+              <widget class="QCheckBox" name="checkBox_5">
                <property name="text">
-                <string>停止</string>
+                <string>服役时间</string>
                </property>
               </widget>
+             </item>
+             <item row="4" column="0">
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
              </item>
              <item row="1" column="0" rowspan="2">
               <widget class="QCheckBox" name="checkBox_4">
@@ -77,15 +77,48 @@
                </property>
               </widget>
              </item>
-             <item row="5" column="0" rowspan="2">
+             <item row="7" column="0" rowspan="2">
               <widget class="QCheckBox" name="checkBox_6">
                <property name="text">
                 <string>服务器造价</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QPushButton" name="pushButton_4">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>用户选项</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="4" column="1">
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="5" column="1">
+              <widget class="QPushButton" name="pushButton_5">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -93,14 +126,7 @@
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>运行</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0" rowspan="2">
-              <widget class="QCheckBox" name="checkBox_5">
-               <property name="text">
-                <string>服役时间</string>
+                <string>保存</string>
                </property>
               </widget>
              </item>
@@ -123,13 +149,31 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>277</width>
-            <height>302</height>
+            <width>274</width>
+            <height>297</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
-            <widget class="QTextBrowser" name="textBrowser"/>
+            <widget class="QTextBrowser" name="textBrowser">
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;使用本软件，您必须：&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1. 首先加载网络文件&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2. 在左方勾选对应考量权重后加载对应文件&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3. 点击运行查看结果，然后可以选择将生成的可视化网络保存成图片&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4. 在任何时候重新加载 1、2 步中的文件，注意重载网络文件会重构网络，因此必须再重载一次所有权重文件。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;数据格式：&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1.总规则. 您用于分隔数据的字符可以是空格、制表符或者换行，前二者在任何时候都可以混用，换行符则需要遵守下述规则&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2.换行符规则. 在网络文件中，一行如果有数据则必须含描述一条边的足够的数据，您勾选“包含网络平均延时”时一行中应该有三个整数，否则应该有两个；行间有多余的空行是允许的。在节点名称映射表、服役时间文件和服务器造价文件中，换行符与空格、制表符地位等同，可以任意混用。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3.数据类型规则. 在网络文件中，所有的数据都必须是整数，一行中的数据按照顺序分别是边的两端节点编号和（可选的）这条网络链路的平均延时（单位毫秒，小数点四舍五入）。节点名称映射表中，所有的数据必须是字符串，顺序第 i 个字符串描述了服务器节点编号为 i 的名称，请务必保证所提供的的字符串的数量匹配服务器节点个数，否则将报错。服役时间文件和服务器造价文件中所有的数据将被视为浮点数，单位任意、只要所有节点统一即可，请务必保证提供的数据数量匹配服务器节点个数，否则也将报错。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -146,7 +190,7 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">
@@ -162,9 +206,9 @@
     <property name="title">
      <string>设置</string>
     </property>
-    <addaction name="action_set_ndsize"/>
-    <addaction name="action_set_ndcolor"/>
-    <addaction name="action_set_link"/>
+    <addaction name="action_set_max_nd"/>
+    <addaction name="action_set_medium_nd"/>
+    <addaction name="action_set_min_nd"/>
    </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_set"/>
@@ -203,19 +247,24 @@
     <string>添加节点特征文件3</string>
    </property>
   </action>
-  <action name="action_set_ndsize">
+  <action name="action_set_max_nd">
    <property name="text">
-    <string>设置节点大小</string>
+    <string>设置最大点颜色</string>
    </property>
   </action>
-  <action name="action_set_ndcolor">
+  <action name="action_set_medium_nd">
    <property name="text">
-    <string>设置节点颜色</string>
+    <string>设置次大点颜色</string>
    </property>
   </action>
-  <action name="action_set_link">
+  <action name="action_min_nd">
    <property name="text">
-    <string>设置连接粗细</string>
+    <string>设置最小点颜色</string>
+   </property>
+  </action>
+  <action name="action_set_min_nd">
+   <property name="text">
+    <string>设置最小点颜色</string>
    </property>
   </action>
  </widget>
